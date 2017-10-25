@@ -1,0 +1,47 @@
+
+Testing constructors.
+Clock should be 1:1:1 1:1:1
+Clock should be 21:4:2 21:4:2
+Clock should be 1:1:19 1:50:19
+Clock should be 1:59:6: 1:50:26
+
+Testing time elapsed
+23:27:19 39360 seconds after 12:31:21
+
+Testing secInClock
+12:31:21 has seconds: 21
+
+Testing equals
+23:27:19 = 12:31:21 false
+23:27:19 = 23:27:19 true
+
+Testing before and after.
+1:50:19 after 21:4:2 should be false: true
+1:50:26 after 1:50:19 should be true: true
+21:4:2 after 21:4:2 should be false: false
+21:4:2 after 1:50:19 should be true: true
+1:50:19 after 1:50:26 should be false: false
+21:4:2 before 1:50:19 should be false: true
+1:50:19 before 1:50:26 should be true: true
+21:4:2 before 21:4:2 should be false: false
+1:50:19 before 21:4:2 should be true: true
+1:50:26 before 1:50:19 should be false: false
+
+Testing convertClock.
+112719PM should be : 12:27:19 AM
+123121PM - 21:4:2 should be : 12:31:21 PM
+
+Testing timeInDay.
+AM should be : AM
+PM should be : PM
+
+Testing selection sort
+21:4:2
+1:50:19
+1:50:26
+23:27:19
+SORTED
+1:50:19
+1:50:26
+21:4:2
+23:27:19
